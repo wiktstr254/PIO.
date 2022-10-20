@@ -2,7 +2,7 @@ package pio;
 
 import java.util.Random;
 
-public class PIO {
+public class Pio {
     
      public static void main(String[] args) {
 
@@ -14,13 +14,11 @@ public class PIO {
             System.out.println("---------------------");
             
             Player player = new Player();
-            player.name = "Wiktor";
 
             number = dice.nextInt(6) + 1;
             System.out.println("Kostka: " + number);
 
             guess = player.guess();
-            System.out.println(player.name + ": " + guess);
 
             if (number != guess) {
                 System.out.println("PUDŁO!");
