@@ -1,4 +1,4 @@
-package pio;
+package com.mycompany.pio;
 
 import java.util.Random;
 
@@ -17,10 +17,12 @@ public class Player {
     }
     
     public void setName(String name) {
-        if(name != null && !name.isEmpty())
+        final String regex = "^[\\-\\_\\.\\w]{3,}$";
+        
+        if(name.matches(regex)) 
             this.name = name;
         else
-            System.err.println("Błędne imię");
+            throw new IllegalArgumentException("Błędne imię");
     }
     
     public String getName() {
