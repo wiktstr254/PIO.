@@ -1,4 +1,4 @@
-package pio;
+package com.mycompany.pio;
 
 import java.util.Random;
 
@@ -6,20 +6,20 @@ public class Pio {
     
      public static void main(String[] args) {
 
-     Random dice = new Random();     //obiekt losujący
+        Random dice = new Random();  //obiekt losujący
         int number;                  //wylosowana liczba
         int guess;                   //propozycja (strzał) gracza
-
+        PlayerHuman player = new PlayerHuman();
+        
         do {
             System.out.println("---------------------");
             
-            Player player = new Player();
-
             number = dice.nextInt(6) + 1;
             System.out.println("Kostka: " + number);
-
+            
             guess = player.guess();
-
+            System.out.println(player.getName() + ": " + guess);
+            
             if (number != guess) {
                 System.out.println("PUDŁO!");
             }
