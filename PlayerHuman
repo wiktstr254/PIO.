@@ -1,0 +1,14 @@
+package com.mycompany.pio;
+
+import java.util.Scanner;
+
+public class PlayerHuman extends Player{
+    
+    private Scanner scanner = new Scanner(System.in);
+    
+    @Override
+    int guess() {
+        System.out.println("Podaj liczbę od 1 do 6: ");
+        return scanner.nextInt();
+    }
+}
