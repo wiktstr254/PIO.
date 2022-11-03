@@ -9,7 +9,7 @@ public class Pio {
         Random dice = new Random();  //obiekt losujący
         int number;                  //wylosowana liczba
         int guess;                   //propozycja (strzał) gracza
-        PlayerHuman player = new PlayerHuman();
+        Player player = new PlayerComputer();
         
         do {
             System.out.println("---------------------");
