@@ -4,10 +4,18 @@ import java.util.Scanner;
 
 public class PlayerHuman extends Player{
     
-    private Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
+    
+    public PlayerHuman() { 
+        
+    }
+    
+    public PlayerHuman(String name) {
+        super(name);
+    }
     
     @Override
-    int guess() {
+    public int guess() {
         System.out.println("Podaj liczbę od 1 do 6: ");
         return scanner.nextInt();
     }
